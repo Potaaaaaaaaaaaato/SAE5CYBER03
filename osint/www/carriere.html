@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrières - Entreprise Fictive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #e74c3c;
+        }
+        .content {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        .job-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .job-item {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+        }
+        .job-item h3 {
+            margin: 0 0 10px;
+            color: #2c3e50;
+        }
+        .job-item p {
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #34495e;
+            color: white;
+            position: relative;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Carrières - Entreprise Fictive</h1>
+    </header>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="equipe.html">Équipe</a>
+        <a href="rapports.html">Rapports</a>
+        <a href="news.html">Actualités</a>
+        <a href="carriere.html">Carrières</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="content">
+        <h2>Rejoignez notre équipe !</h2>
+        <p>Entreprise Fictive recrute des talents pour renforcer notre infrastructure IT. Nous utilisons un Active Directory pour l’authentification et un VPN SSL pour le télétravail. Si vous avez de l’expérience en cybersécurité, envoyez votre CV à Bob Martin. Note : Nos services DMZ incluent un mail IMAP avec creds test (ex. : alice:Admin123 pour maintenance).</p>
+        <ul class="job-list">
+            <li class="job-item">
+                <h3>Administrateur Réseau</h3>
+                <p>Description : Gestion du pare-feu Stormshield, VLANs Cisco, et services DMZ (web, mail, DB). Connaissance de SNMP et patchs sécurité requise (ex. : SNMP sur 10.0.20.2, communauté "public").</p>
+                <p>Requis : Expérience Windows Server et Debian, patch EternalBlue (CVE-2017-0144).</p>
+                <p>Contact : <a href="mailto:bob.martin@entreprise-fictive.fr">bob.martin@entreprise-fictive.fr</a></p>
+                <!-- Hint : SNMP 10.0.20.2 public -->
+            </li>
+            <li class="job-item">
+                <h3>Stagiaire IT</h3>
+                <p>Description : Aide à la maintenance de l’AD et du VPN. Tests de services comme MySQL et Samba (port 445 ouvert pour tests).</p>
+                <p>Requis : Bases en cybersécurité, connaissance OSINT appréciée. Expérience Zerologon (CVE-2020-1472) un plus.</p>
+                <p>Contact : <a href="mailto:alice.dupont@entreprise-fictive.fr">alice.dupont@entreprise-fictive.fr</a></p>
+                <!-- Hint : IMAP creds alice:Admin123 -->
+            </li>
+            <li class="job-item">
+                <h3>Développeur Sécurité</h3>
+                <p>Description : Sécurisation de notre DB MySQL (port 3306, faille SQLi CVE-2021-XXXX). Aide à patcher l'AD sur 10.0.10.5.</p>
+                <p>Requis : SQL, cybersécurité réseau.</p>
+                <p>Contact : <a href="mailto:jdoe@entreprise-fictive.fr">jdoe@entreprise-fictive.fr</a></p>
+                <!-- Hint : DB port 3306, AD 10.0.10.5 -->
+            </li>
+        </ul>
+        <p>Nous offrons un environnement dynamique avec accès à notre réseau sécurisé. Postulez dès maintenant et rejoignez Alice et Bob !</p>
+    </div>
+    <footer>
+        <p>&copy; 2025 Entreprise Fictive - Tous droits réservés | Adresse : 123 Rue Fictive, Roanne</p>
+    </footer>
+</body>
+</html>

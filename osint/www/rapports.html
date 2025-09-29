@@ -16,15 +16,16 @@
             background-color: #2c3e50;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 40px 20px;
         }
         nav {
             background-color: #34495e;
-            padding: 10px;
+            padding: 15px;
+            text-align: center;
         }
         nav a {
             color: white;
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
             font-weight: bold;
         }
@@ -32,7 +33,7 @@
             color: #e74c3c;
         }
         .content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 20px auto;
             padding: 20px;
             background-color: white;
@@ -46,22 +47,32 @@
             list-style-type: none;
             padding: 0;
         }
-        .report-list li {
-            margin: 10px 0;
+        .report-item {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
         }
-        .report-list a {
+        .report-item h3 {
+            margin: 0 0 10px;
+            color: #2c3e50;
+        }
+        .report-item p {
+            margin: 5px 0;
+        }
+        .report-item a {
             color: #e74c3c;
             text-decoration: none;
         }
-        .report-list a:hover {
+        .report-item a:hover {
             text-decoration: underline;
         }
         footer {
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             background-color: #34495e;
             color: white;
-            position: fixed;
+            position: relative;
             width: 100%;
             bottom: 0;
         }
@@ -76,17 +87,39 @@
         <a href="equipe.html">Équipe</a>
         <a href="rapports.html">Rapports</a>
         <a href="news.html">Actualités</a>
+        <a href="carriere.html">Carrières</a>
+        <a href="contact.html">Contact</a>
     </nav>
     <div class="content">
-        <h2>Rapports disponibles</h2>
+        <h2>Nos rapports internes</h2>
+        <p>Ces rapports sont destinés à notre équipe IT et contiennent des analyses de sécurité. Ils sont confidentiels, mais accessibles pour référence interne. Note : Certains documents ont été uploadés par Alice lors de tests, veuillez vérifier les permissions. Par exemple, le rapport sur le SMB mentionne un port 445 ouvert pour tests, vulnérable à EternalBlue (CVE-2017-0144).</p>
         <ul class="report-list">
-            <li><a href="rapports/pentest_2024.pdf">Rapport de test de pénétration 2024</a> - Analyse sécurité réseau (oublié par Alice).</li>
-            <li><a href="rapports/audit_reseau_2025.pdf">Audit réseau 2025</a> - État des services (en préparation).</li>
+            <li class="report-item">
+                <h3>Rapport de test de pénétration 2024</h3>
+                <p>Analyse des vulnérabilités réseau par un consultant externe. Inclut des détails sur le SMB (port 445) vulnérable à EternalBlue (CVE-2017-0144) et l'AD non patché contre Zerologon (CVE-2020-1472). IP du contrôleur AD : 10.0.10.5.</p>
+                <a href="rapports/pentest_2024.pdf">Télécharger le rapport (PDF)</a>
+                <p>Date : 15/06/2024 | Auteur : Consultant externe</p>
+                <!-- Hint : AD vulnérable, patch KB500XXXX manquant -->
+            </li>
+            <li class="report-item">
+                <h3>Audit réseau 2025</h3>
+                <p>État des services : VPN SSL avec certificat auto-signé, SNMP public sur switch (communauté "public", port 161 sur 10.0.20.2), et base de données MySQL avec faille SQLi potentielle (CVE-2021-XXXX).</p>
+                <a href="rapports/audit_reseau_2025.txt">Télécharger l'audit (TXT)</a>
+                <p>Date : 20/09/2025 | Auteur : Bob Martin</p>
+                <!-- Hint : SNMP communauté "public", switch 10.0.20.2 -->
+            </li>
+            <li class="report-item">
+                <h3>Rapport IT interne</h3>
+                <p>Liste des utilisateurs AD et rôles, oublié par Alice lors d'un upload test. Inclut creds temporaires pour VPN (ex. : jdoe:Password123).</p>
+                <a href="rapports/users.xlsx">Télécharger la liste (XLSX)</a>
+                <p>Date : 25/09/2025 | Auteur : Alice Dupont</p>
+                <!-- Hint : Creds temp VPN jdoe:Password123 -->
+            </li>
         </ul>
-        <p>Ces rapports sont confidentiels. Contactez l'IT pour plus d'infos.</p>
+        <p>Pour tout rapport manquant, contactez notre équipe via la page Contact. Attention : Des fichiers test comme users.xlsx contiennent des infos sensibles, à supprimer bientôt.</p>
     </div>
     <footer>
-        <p>&copy; 2025 Entreprise Fictive - Tous droits réservés</p>
+        <p>&copy; 2025 Entreprise Fictive - Tous droits réservés | Adresse : 123 Rue Fictive, Roanne</p>
     </footer>
 </body>
 </html>

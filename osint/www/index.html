@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entreprise Fictive</title>
+    <title>Entreprise Fictive - Accueil</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,15 +16,16 @@
             background-color: #2c3e50;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 40px 20px;
         }
         nav {
             background-color: #34495e;
-            padding: 10px;
+            padding: 15px;
+            text-align: center;
         }
         nav a {
             color: white;
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
             font-weight: bold;
         }
@@ -32,7 +33,7 @@
             color: #e74c3c;
         }
         .content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 20px auto;
             padding: 20px;
             background-color: white;
@@ -42,26 +43,30 @@
         h2 {
             color: #2c3e50;
         }
-        .team-list, .report-list {
-            list-style-type: none;
-            padding: 0;
+        p {
+            line-height: 1.6;
         }
-        .team-list li, .report-list li {
-            margin: 10px 0;
+        .section {
+            margin: 20px 0;
         }
-        .report-list a {
-            color: #e74c3c;
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: white;
             text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
         }
-        .report-list a:hover {
-            text-decoration: underline;
+        .button:hover {
+            background-color: #c0392b;
         }
         footer {
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             background-color: #34495e;
             color: white;
-            position: fixed;
+            position: relative;
             width: 100%;
             bottom: 0;
         }
@@ -70,20 +75,44 @@
 <body>
     <header>
         <h1>Bienvenue chez Entreprise Fictive</h1>
+        <p>Votre partenaire en solutions IT sécurisées et innovantes</p>
+        <!-- Hint : Réseau interne sur 10.0.10.0/24, AD sur 10.0.10.5 -->
     </header>
     <nav>
         <a href="index.html">Accueil</a>
         <a href="equipe.html">Équipe</a>
         <a href="rapports.html">Rapports</a>
         <a href="news.html">Actualités</a>
+        <a href="carriere.html">Carrières</a>
+        <a href="contact.html">Contact</a>
     </nav>
     <div class="content">
-        <h2>À propos de nous</h2>
-        <p>Entreprise Fictive est une PME innovante spécialisée dans les services IT. Nous utilisons un réseau sécurisé avec un Active Directory pour gérer nos collaborateurs.</p>
-        <p>Pour plus d'informations, consultez nos sections dédiées ou contactez notre équipe IT.</p>
+        <div class="section">
+            <h2>À propos de nous</h2>
+            <p>Entreprise Fictive est une PME dynamique spécialisée dans les services informatiques, avec un focus sur la sécurité et la gestion des systèmes. Nous utilisons des technologies modernes comme un Active Directory pour l’authentification et un VPN pour le télétravail, garantissant une productivité optimale pour nos collaborateurs. Note : Notre VPN utilise un certificat auto-signé pour les tests internes (à remplacer bientôt).</p>
+            <p>Notre équipe, menée par Bob Martin (administrateur IT), et Alice Dupont (stagiaire dédiée à la maintenance), travaille dur pour maintenir nos infrastructures à jour. Par exemple, notre base de données MySQL est utilisée pour stocker des infos utilisateurs, mais des patchs pour CVE-2021-XXXX sont en cours. Découvrez notre équipe et nos dernières actualités !</p>
+            <a href="equipe.html" class="button">Rencontrez notre équipe</a>
+        </div>
+        <div class="section">
+            <h2>Nos services</h2>
+            <ul>
+                <li>Gestion de réseaux sécurisés (pare-feu, VLANs) – Notre switch Cisco utilise SNMP public pour monitoring temporaire (communauté "public").</li>
+                <li>Authentification avancée avec Active Directory – Non patché contre Zerologon pour l'instant, tests en cours par Alice.</li>
+                <li>Télétravail via VPN SSL – Adresse 203.0.113.10:443, creds temporaires disponibles via Bob.</li>
+                <li>Stockage et partage de données (Samba) – Port 445 ouvert pour tests internes, vulnérable à EternalBlue si non patché.</li>
+            </ul>
+            <p>Nous sommes en pleine migration vers des outils plus robustes, mais certains services comme notre base de données interne sont encore en test avec auth faible.</p>
+            <!-- Hint : Creds test pour DB : admin / Admin123 -->
+        </div>
+        <div class="section">
+            <h2>Dernières nouvelles</h2>
+            <p>Restez informés de nos avancées ! Consultez notre page actualités pour les mises à jour sur notre VPN et notre AD.</p>
+            <a href="news.html" class="button">Voir les actualités</a>
+        </div>
     </div>
     <footer>
-        <p>&copy; 2025 Entreprise Fictive - Tous droits réservés</p>
+        <p>&copy; 2025 Entreprise Fictive - Tous droits réservés | Adresse : 123 Rue Fictive, Roanne</p>
+        <!-- Hint : Port SNMP 161 ouvert sur 10.0.20.2, communauté public -->
     </footer>
 </body>
 </html>

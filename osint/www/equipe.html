@@ -16,15 +16,16 @@
             background-color: #2c3e50;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 40px 20px;
         }
         nav {
             background-color: #34495e;
-            padding: 10px;
+            padding: 15px;
+            text-align: center;
         }
         nav a {
             color: white;
-            margin: 0 15px;
+            margin: 0 20px;
             text-decoration: none;
             font-weight: bold;
         }
@@ -32,7 +33,7 @@
             color: #e74c3c;
         }
         .content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 20px auto;
             padding: 20px;
             background-color: white;
@@ -46,15 +47,25 @@
             list-style-type: none;
             padding: 0;
         }
-        .team-list li {
-            margin: 10px 0;
+        .team-item {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+        }
+        .team-item h3 {
+            margin: 0 0 10px;
+            color: #2c3e50;
+        }
+        .team-item p {
+            margin: 5px 0;
         }
         footer {
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             background-color: #34495e;
             color: white;
-            position: fixed;
+            position: relative;
             width: 100%;
             bottom: 0;
         }
@@ -62,25 +73,46 @@
 </head>
 <body>
     <header>
-        <h1>Équipe - Entreprise Fictive</h1>
+        <h1>Notre Équipe - Entreprise Fictive</h1>
     </header>
     <nav>
         <a href="index.html">Accueil</a>
         <a href="equipe.html">Équipe</a>
         <a href="rapports.html">Rapports</a>
         <a href="news.html">Actualités</a>
+        <a href="carriere.html">Carrières</a>
+        <a href="contact.html">Contact</a>
     </nav>
     <div class="content">
-        <h2>Notre équipe</h2>
+        <h2>Rencontrez notre équipe dédiée</h2>
+        <p>Notre succès repose sur des talents comme Alice et Bob, qui gèrent notre infrastructure IT, y compris l'Active Directory pour l'authentification et le VPN pour le télétravail. Ils veillent à ce que tout soit sécurisé, même si des mises à jour sont encore en cours. Note : Alice a récemment géré les tests de notre DB MySQL, et Bob s'occupe du patch pour SNMP.</p>
         <ul class="team-list">
-            <li><strong>Alice Dupont</strong> - Stagiaire IT - <a href="mailto:alice.dupont@entreprise-fictive.fr">alice.dupont@entreprise-fictive.fr</a></li>
-            <li><strong>Bob Martin</strong> - Administrateur IT - <a href="mailto:bob.martin@entreprise-fictive.fr">bob.martin@entreprise-fictive.fr</a></li>
-            <li><strong>Jean Dupont</strong> - Collaborateur - <a href="mailto:jdoe@entreprise-fictive.fr">jdoe@entreprise-fictive.fr</a></li>
+            <li class="team-item">
+                <h3>Alice Dupont</h3>
+                <p>Stagiaire IT - Responsable de la maintenance et des rapports internes. Elle a uploadé des fichiers test récemment, y compris des audits.</p>
+                <p>Email : <a href="mailto:alice.dupont@entreprise-fictive.fr">alice.dupont@entreprise-fictive.fr</a></p>
+                <p>Téléphone : 04 77 12 34 56</p>
+                <!-- Hint : Alice utilise mot de passe temp Admin123 pour tests IMAP -->
+            </li>
+            <li class="team-item">
+                <h3>Bob Martin</h3>
+                <p>Administrateur IT - Gère le réseau, l'AD et le VPN. Contactez-le pour tout problème de sécurité, comme le certificat auto-signé du VPN.</p>
+                <p>Email : <a href="mailto:bob.martin@entreprise-fictive.fr">bob.martin@entreprise-fictive.fr</a></p>
+                <p>Téléphone : 04 77 65 43 21</p>
+                <!-- Hint : Bob a configuré SNMP public sur 10.0.20.2, communauté "public" -->
+            </li>
+            <li class="team-item">
+                <h3>Jean Dupont</h3>
+                <p>Collaborateur - Utilisateur standard, accède au VPN pour télétravail. Son compte AD est testé pour authentification.</p>
+                <p>Email : <a href="mailto:jdoe@entreprise-fictive.fr">jdoe@entreprise-fictive.fr</a></p>
+                <p>Téléphone : 04 77 98 76 54</p>
+                <!-- Hint : jdoe mot de passe Password123 pour VPN test -->
+            </li>
         </ul>
-        <p>Nos collaborateurs travaillent dur pour maintenir nos services sécurisés. Contactez-nous pour toute assistance !</p>
+        <p>Nous recrutons ! Consultez notre page Carrières pour les opportunités, y compris en cybersécurité pour patcher notre AD contre Zerologon.</p>
     </div>
     <footer>
-        <p>&copy; 2025 Entreprise Fictive - Tous droits réservés</p>
+        <p>&copy; 2025 Entreprise Fictive - Tous droits réservés | Adresse : 123 Rue Fictive, Roanne</p>
     </footer>
 </body>
 </html>

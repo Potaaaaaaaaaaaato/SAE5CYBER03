@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  osint-web:
+    build:
+      context: .  # Utilise le dossier courant (/osint/) pour le build
+    image: osint-web:latest  # Nom de l'image buildée
+    ports:
+      - "80:80"  # Mappe port 80 de la VM/Mac au conteneur
+    volumes:
+      - ./www:/usr/share/nginx/html  # Volume pour éditer fichiers sans rebuild
+    restart: always  # Redémarre auto en cas de crash

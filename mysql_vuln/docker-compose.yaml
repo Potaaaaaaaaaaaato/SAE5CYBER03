@@ -1,6 +1,7 @@
 services:
   mysql:
-    image: mysql:5.7
+    image: mysql:8.0
+    platform: linux/arm64  # Force ARM64 pour ta VM
     environment:
       MYSQL_ROOT_PASSWORD: rootpass
       MYSQL_DATABASE: vpn_db
@@ -8,8 +9,10 @@ services:
       - "3306:3306"
     volumes:
       - ./mysql-data:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password --init-file /docker-entrypoint-initdb.d/init.sql  # Pour compatibilité et init
   web:
-    image: php:apache
+    image: php:8.1-apache  # Version récente compatible ARM
+    platform: linux/arm64
     volumes:
       - ./app:/var/www/html
     ports:
